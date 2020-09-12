@@ -1,9 +1,19 @@
 var members = ['egoing', 'k8805', 'hoya'];
-console.log(members[1]); //array k8805
+console.log(members[1]); // k8805
+var i = 0;
+while (i < members.length) {
+    console.log('array loop', members[i]);
+    i = i + 1;
+}
 
 var roles = {
-    'programmer': 'egoing'
-    'desingner': 'k8805',
+    'programmer': 'egoing',
+    'designer': 'k8805',
     'manager': 'hoya'
-} //객체는 각각의 데이터 마다 고유 명칭을 적어준다.
-console.log(roles.desingner); //k8805
+}
+console.log(roles.designer); //k8805
+console.log(roles['designer']); //k8805
+
+for (var n in roles) {
+    console.log('object => ', n, 'value => ', roles[n]);
+}
